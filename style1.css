@@ -1,0 +1,777 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*w = con + pad + bor*/
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, Times, serif
+}
+
+body{
+    background: #081b29;
+    color: #a8a8a8;
+
+}
+
+.header-home{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:  100%;
+    padding: 20px 10%;
+    background: yellowgreen;
+    color: #081b29;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100; /*works on postion rel, abs, fix, sticky*/
+}
+
+.navbar a {
+    font-size: 1.5em;
+    color:#081b29;
+    text-decoration: none; 
+    margin-right: 30px; /* Adds space between links */
+    font-weight: bold;
+    transition: .5s; 
+}
+
+.navbar a:last-child {
+    margin-right: 0; /* Prevents extra space after the last link */
+}
+
+.navbar a:hover {
+    color: darkviolet; 
+}
+
+
+.logo{
+    font-size: 2.5em;
+    color: #081b29;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.home{
+    height: 110vh; /* lowers the text*/
+    display:flex;
+    align-items: center;
+    padding: 0 10%; 
+    justify-content: space-between; 
+
+}
+
+.home-content{
+    max-width: 70%;
+}
+
+
+.profile-pic {
+    width: 300px; /* Adjust the size of the image */
+    height: 300px;
+    border-radius: 50%; /* Keeps the image round */
+    margin-left: 30px; /* Space between image and text */
+    object-fit: cover; 
+    margin-top: 100px;
+}
+
+.home-img {
+    display: none; 
+}
+
+
+
+.home-content h1{
+    font-size: 4em;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.home-content h3{
+    font-size: 2.5em;
+    font-weight: 700; /*?*/
+    color: yellowgreen;
+    margin-top: 10px;
+}
+
+.home-content p{
+    font-size: 1.3em;
+    margin: 3px;
+}
+
+.home-content p a{
+    color: #a8a8a8;
+    text-decoration: none;
+    transition: .5s;
+}
+
+.home-content p a:hover{
+    color: darkviolet;
+}
+
+.home-content .wel-btn{
+    display: flex;
+    justify-content: center;
+    gap: 50px; /* Adjust the value to control the space */
+    width: 90%;
+    height: 50px;
+}
+
+
+.wel-btn a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    border: 2px solid yellowgreen;
+    border-radius: 8px;
+    font-size: 19px;
+    color: #081b29;
+    background: yellowgreen;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    transition: .5s;
+    overflow: hidden;
+}
+
+.wel-btn a:hover{
+    color: yellowgreen; 
+}
+
+
+.wel-btn a:nth-child(2){ /* second button colour on welcome*/
+background: transparent;
+color: yellowgreen;
+}
+
+.wel-btn a:nth-child(2):hover{ /* second button colour on welcome*/
+    color: #081b29;
+    }
+
+.wel-btn a:nth-child(2)::before{
+    background: yellowgreen;
+}
+
+.wel-btn a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #081b29;
+    z-index: -1;
+    transition: .5s;
+}
+
+.wel-btn a:hover::before{
+    width: 100%;
+}
+
+
+.socials {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 40px; 
+    width: 170px;
+    background: transparent;
+}
+
+.socials a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid yellowgreen;
+    border-radius: 50%;
+    font-size: 20px;
+    color: yellowgreen;
+    text-decoration: none;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.socials a:hover{
+    color: #081b29;
+
+}
+
+.socials a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: yellowgreen;
+    z-index: -1;
+    transition: .5s;
+}
+
+.socials a:hover:before{
+    width: 100%;
+
+}
+
+/*----------------------CV page-----------------------------------------*/
+
+/* Add margin to the section to place it below the navbar */
+.CV {
+    margin-top: 50px; /* Match this with the navbar height */
+}
+
+/* Big box style */
+.CV-title {
+    height: 300px; /* Adjust the height as needed */
+    background-color: transparent;
+    display: flex;
+    justify-content: center; /* Centers the text horizontally */
+    align-items: flex-end; /* Aligns CV at the bottom of the div */
+    position: relative;
+    padding-left: 100px;
+}
+
+/* CV text style */
+.CV-title h1 {
+    font-size: 10em; 
+    background-color: transparent;
+    padding: 0 10%; /* Horizontal padding */
+    margin: 0; /* Remove default margin */
+    bottom: 0%;
+    left: 100px;
+}
+
+.contact-info {
+    text-align: center;
+    font-size: 1.5em;
+    margin: 10px 0;
+    color: #a8a8a8;
+    font-weight: bold;
+}
+
+.personal-summary {
+    text-align: center;
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #a8a8a8;
+    font-weight: bold;
+}
+
+/* Line under CV */
+.section-line {
+    height: 8px;
+    background-color: #a8a8a8;
+    margin: 20px 10px; /*controls length of line*/
+}
+
+.subsection-line {
+    height: 2px;
+    background-color: #a8a8a8;
+    margin: 20px 10px;
+}
+
+/* Education section */
+.CV-education {
+    margin-top: 20px;
+}
+
+.CV-education h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    padding-left: 20px;
+}
+
+.education-item {
+    margin-bottom: 20px;
+    transition: 0.5s;
+}
+
+.education-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+    padding-left: 20px;
+}
+
+.education-item p {
+    margin: 5px 0;
+    text-align: justify; /* Justify the text so the ends are in line */
+    word-wrap: break-word; /* Ensures long words break and wrap to next line */
+    overflow-wrap: break-word; /* Similar to word-wrap, for compatibility */
+    overflow: hidden; /* Hides any overflowing content */
+    padding-left: 20px;
+    padding-right: 10px; /* Add some padding on the right to create space */
+}
+
+.education-item p em{
+    font-size: 1.3em;
+}
+
+/* New Section: Programming Skills */
+.CV-skills {
+    margin-top: 20px;
+}
+
+.skills-item {
+    margin-bottom: 15px;
+    transition: .5s;
+}
+
+.skills-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    padding-left: 20px;
+}
+
+.skills-item p {
+    margin: 5px 0;
+    text-align: justify;
+    word-wrap: break-word; 
+    overflow-wrap: break-word; 
+    overflow: hidden;
+    padding-right: 10px;
+    padding-left: 20px; 
+}
+
+/* Hover effect for education items */
+.education-item:hover {
+    background-color: yellowgreen;
+    color: #081b29; /* Change text color for contrast */
+}
+
+/* Hover effect for skills items */
+.skills-item:hover {
+    background-color: yellowgreen;
+    color: #081b29; /* Change text color for contrast */
+}
+
+/* Professional Experience Section */
+.CV-experience {
+    margin-top: 20px;
+}
+
+.experience-item {
+    margin-bottom: 20px;
+    transition: .5s;
+}
+
+.experience-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+    padding-left: 20px;
+}
+
+.experience-item p {
+    margin: 5px 0;
+    text-align: justify;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    overflow: hidden;
+    padding-left: 20px;
+    padding-right: 10px;
+}
+
+.experience-item em {
+    padding-left: 20px;
+}
+
+.experience-item p em {
+    font-size: 1.3em;
+}
+
+.experience-item h4 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    padding-left: 20px;
+}
+
+.experience-item p {
+    margin: 5px 0;
+    text-align: justify;
+    word-wrap: break-word; 
+    overflow-wrap: break-word; 
+    overflow: hidden;
+    padding-right: 10px;
+    padding-left: 20px; 
+}
+
+.experience-item ul {
+    list-style-type: disc !important; /* Ensures bullet points are displayed */
+    padding-left: 40px; /* Adjust padding to align bullets */
+}
+
+.experience-item ul li {
+    margin: 5px 0;
+    text-align: justify;
+    word-wrap: break-word; 
+    overflow-wrap: break-word; 
+    overflow: hidden;
+    padding-right: 10px;
+    padding-left: 20px; 
+    list-style-type: circle;
+}
+
+.experience-item:hover {
+    background-color: yellowgreen;
+    color: #081b29; 
+}
+
+ul {
+    list-style-type: disc;  
+    padding-left: 40px; /* Adjust padding to align bullets */
+}
+
+.experience-item ul {
+    list-style-type: disc !important; /* Ensures bullet points are displayed */
+    padding-left: 40px; /* Adjust padding to align bullets */
+}
+
+.experience-item ul li {
+    margin: 5px 0;
+    text-align: justify;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    overflow: hidden;
+    padding-right: 10px;
+    padding-left: 20px;
+}
+
+
+.experience-item ul ul {
+    list-style-type: circle; /* Different bullet style for nested lists */
+    padding-left: 40px;
+}
+
+
+.projects{
+    margin-top: 10%; /* Match this with the navbar height */
+}
+
+
+.projects-title {
+    height: 70vh; /* Adjust the height as needed */
+    background-color: transparent;
+    display: flex;
+    justify-content: center; /* Centers the text horizontally */
+    align-items: flex-end; /* Aligns CV at the bottom of the div */
+    position: relative;
+    padding-left: 100px;
+}
+
+/* projects text style */
+.projects-title h1 {
+    font-size: 6em; 
+    background-color: transparent;
+    padding: 0 10%; 
+    margin: 0; 
+    bottom: 0%;
+    left: 100px;
+}
+
+footer {
+    margin-top: 10vh;
+    background-color: yellowgreen;
+    color: #081b29;
+    text-align: center;
+    padding: 1px;
+    font-size: 1.3rem;
+}
+
+/* General styling for articles */
+.main-content {
+    padding: 20px;
+}
+
+.article {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 5%;
+}
+
+.article-header {
+    background-color: #006f8b;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.article h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    text-align: center; /* Center align the title */
+}
+
+.article p{
+    background: black;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.slider {
+    width: 100%;
+    position: relative; /* To position the images within the slider */
+    overflow: hidden;
+    margin: 20px 0;
+    background-color: #fff;
+    height: 600px; /* Fixed height for the slider images */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider-images {
+    position: relative; /* Relative to the slider container */
+    width: 100%;
+    height: 100%;
+}
+
+.slider-images img {
+    position: absolute; /* Stack images on top of each other */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ensure the image fits within the slider without being cropped */
+    opacity: 0; /* Start off all images as invisible */
+    animation: fade 9s infinite;
+}
+
+/* Set individual delays for each image */
+#slider1, #slider4, #slider7 {
+    animation-delay: 0s;
+    z-index: 1;
+}
+#slider2, #slider5, #slider8  {
+    animation-delay: 3s;
+    z-index: 1;
+}
+#slider3, #slider6, #slider9 {
+    animation-delay: 6s;
+    z-index: 1;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    30% {
+        opacity: 1;
+    }
+    40% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+/*----------------------Contact page------------------------*/
+.contact-me {
+    margin-top: 100px;
+    max-width: 90%; 
+} 
+
+.contact{
+    height: 350px; 
+    background-color:transparent;
+    display: flex;
+    justify-content: left; 
+    align-items: flex-end; 
+    position: relative;
+    padding-left: 10px;
+} 
+
+.contact h1 {
+    font-size: 5em; 
+    background-color: transparent;
+    padding: 0 5%; 
+    margin: 0; 
+    bottom: 0%;
+    left: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+} 
+
+.form-container {
+    display: flex;
+    align-items: center;
+}
+
+form {
+    background-color: transparent;
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 80%;
+
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input, form textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.form-container .form-buttons{
+    display: flex;
+    justify-content: space-evenly;
+
+} 
+
+.form-buttons input {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 100%;
+    border: 3px solid yellowgreen;
+    border-radius: 8px;
+    font-size: 19px;
+    color: #081b29;
+    background: yellowgreen;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1; 
+    transition: .5s;
+    overflow: hidden;
+}
+
+.form-buttons input:hover{
+    background-color: #081b29;
+    color: yellowgreen;
+} 
+
+.form-buttons input:nth-child(2){
+    background: transparent;
+    color: yellowgreen;
+} 
+
+.form-buttons input:nth-child(2):hover{
+    background: yellowgreen;
+    color: #081b29;
+}
+
+.form-buttons input:nth-child(2)::before{
+    color: yellowgreen;
+}
+
+.form-buttons input::before{
+    content: '';
+    position: absolute; 
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #081b29;
+    z-index: -1;
+    transition: .5s;
+} 
+
+.form-buttons input:hover::before{
+    width: 100%;
+}
+
+.image-placeholder {
+    width: 50%;
+
+}
+
+.copyright {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    font-style: italic;
+    padding-right: 20px;
+    padding-bottom: 10px;
+}
+
+/* responsive*/
+@media (max-width: 600px) {
+    .logo{
+        font-size: 1em;
+        color: #081b29;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .navbar {
+        display: flex; 
+        flex-wrap: wrap;
+        justify-content: space-between; 
+        padding: 5px; 
+        font-size: 8px; 
+    }
+    
+    .navbar a {
+        padding: 5px;
+        flex: 1 1 auto; 
+        text-align: center; 
+        white-space: nowrap;
+    }
+
+    .home-content {
+        margin-top: 10px; 
+        font-size: 8px; 
+    }
+
+    .profile-pic {
+        display: none; 
+    }
+
+    .wel-btn {
+        display: none; 
+    }
+    
+    .socials {
+        display: none; 
+    }
+    /* projects style */
+    .projects-title h1 {
+    font-size: 4em; 
+    background-color: transparent;
+    padding: 0 10%; 
+    margin: 0; 
+    bottom: 0%;
+    left: 100px;
+}
+.image-placeholder{
+    display: none;
+}
+
+}
+
+@media (max-width: 1400px){
+    .home{
+        height: 150vh;
+}
+
+.home-content {
+    margin-top: 30px; 
+    font-size: 8px; 
+}
+    .socials {
+        position: relative; 
+        bottom: 0; 
+        right: 0; 
+        padding: 10px; 
+        text-align: center; 
+    }
+}
